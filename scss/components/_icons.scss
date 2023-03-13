@@ -1,0 +1,21 @@
+.socials {
+  position: static;
+  margin: 20px;
+  box-shadow: $shadow;
+}
+
+.social:hover {
+  transform: scale(1.2);
+  transition: 0.3s ease;
+}
+
+@media only screen and (max-width: 769px) {
+  .socials {
+    filter: invert(black, 100%);
+    display: flex;
+    align-self: flex-end;
+  }
+  .social {
+    margin: 10px;
+  }
+}

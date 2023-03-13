@@ -1,0 +1,5 @@
+//mixins
+@mixin flex-setup($direction) {
+  display: flex;
+  flex-direction: $direction;
+}

@@ -1,0 +1,4 @@
+//funkcje
+@function calc-border-radius($height) {
+  @return calc($height / 2);
+}

@@ -1,0 +1,36 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s;
+  color: black;
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+h2 {
+  font-size: 50px;
+}
+
+p {
+  margin: 0;
+}
+
+@media screen and (max-width: 769px) {
+  body {
+    margin: 0;
+    display: block;
+  }
+}

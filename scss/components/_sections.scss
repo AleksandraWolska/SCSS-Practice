@@ -1,0 +1,12 @@
+section {
+  height: fit-content;
+  background-color: color.adjust(#eeeeee, $lightness: 20%);
+  margin: 0;
+}
+
+@media only screen and (min-width: 1940px) {
+  section {
+    width: 1900px;
+    margin: auto;
+  }
+}

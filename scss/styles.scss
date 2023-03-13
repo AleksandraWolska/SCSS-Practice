@@ -1,0 +1,16 @@
+//uzycie modułów sassowych
+@use "sass:color";
+
+@import "helpers/_variables.scss", "helpers/_functions.scss",
+  "helpers/_mixins.scss";
+@import "layout/_header.scss", "layout/_welcome.scss";
+@import "components/_buttons.scss", "components/_icons.scss",
+  "components/_tags.scss";
+
+%flex-setup-row {
+  @include flex-setup(row);
+}
+
+%flex-setup-column {
+  @include flex-setup(column);
+}

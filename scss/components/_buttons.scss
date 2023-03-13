@@ -1,0 +1,22 @@
+.custom-button {
+  $btn-width: 200px;
+  $btn-height: 60px;
+
+  width: $btn-width;
+  height: $btn-height;
+  border-radius: calc-border-radius($btn-height);
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: $shadow;
+  margin-top: 25px;
+  padding: 6px;
+
+  &:hover {
+    background-color: $primary-color;
+    color: white;
+  }
+}

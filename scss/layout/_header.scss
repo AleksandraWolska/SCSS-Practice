@@ -1,0 +1,112 @@
+header {
+    @extend %flex-setup-row;
+    z-index: 5;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    height: 65px;
+    overflow: visible;
+    box-shadow: $shadow;
+  }
+
+
+  .home {
+    height: 40px;
+    margin: 10px 20px 10px;
+  }
+  
+  .menu {
+    font-size: 24px;
+    overflow: visible;
+  }
+  
+  
+  //zagnieżdżenia
+  .menu-item {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    position: relative;
+  
+    &:hover > ul {
+      display: block;
+      width: 150%;
+      top: 65px;
+      left: 0;
+    }
+  }
+  
+  .menu li:hover > ul {
+    display: block;
+    width: 100%;
+  }
+  
+  .menu li {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em;
+  }
+  
+  .menu {
+    ul {
+      position: absolute;
+      display: none;
+      margin: 0;
+      padding: 0;
+  
+      li {
+        display: block;
+      }
+  
+      ul {
+        position: absolute;
+        top: 0;
+        left: 100%;
+      }
+    }
+  }
+  
+  .menu-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+    cursor: pointer;
+  }
+
+
+  nav {
+    margin: 0;
+    overflow: visible;
+  }
+
+
+  
+@media screen and (max-width: 769px) {
+    body {
+      margin: 0;
+      display: block;
+    }
+    #header {
+      background: none;
+      color: white;
+      width: 100%;
+    }
+  
+    .menu .menu-item {
+      display: none;
+      background-color: rgba(0, 0, 0, 0.8);
+      font-size: clamp(0px, 5vw, 20px);
+      margin: 1px;
+    }
+  
+    .menu .menu-item a {
+      color: white;
+    }
+  }

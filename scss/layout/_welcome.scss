@@ -1,0 +1,73 @@
+#welcome-section {
+  background: url(../images/rzeszow-welcome.png) rgba(255, 255, 255, 0.3);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-size: 25px;
+}
+
+.welcome-container h1 {
+  font-weight: 800;
+  margin: 0;
+  font-size: clamp(15px, 8vw, 120px);
+}
+
+.welcome-container {
+  @extend %flex-setup-row;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcome-text {
+  margin-left: clamp(20px, 11vw, 100px);
+  margin-bottom: 50px;
+  max-width: 60vw;
+}
+
+@media only screen and (max-width: 769px) {
+  #welcome-section {
+    background-size: cover;
+
+    font-size: 25px;
+  }
+
+  .welcome-container {
+    @include flex-setup(row);
+    height: 100%;
+    justify-content: flex-end;
+  }
+
+  .welcome-text {
+    justify-content: flex-end;
+    margin-left: clamp(13px, 8vw, 100px);
+    margin-bottom: 50px;
+    max-width: 90vw;
+    font-size: 6vw;
+  }
+
+  .welcome-text h1 {
+    font-size: 12vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .welcome-text h1 {
+    font-size: 12vw;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 1940px) {
+  #welcome-section {
+    width: 100%;
+  }
+  .welcome-text h1 {
+    font-size: 8vw;
+  }
+  .welcome-text {
+    font-size: 2vw;
+  }
+}
