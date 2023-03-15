@@ -3,8 +3,12 @@
   @return calc($height / 2);
 }
 
+@function dimmed($value) {
+  @return rgb(0, 0, 0, $value);
+}
+
 @function lightened($value) {
-  @return rgb(255, 100 + 155, 255, $value);
+  @return rgb(255, 100 + 155, 250 + 20 / 5, $value);
 }
 
 

@@ -1,7 +1,6 @@
-$welcomeContainer: "welcome-container";
-$showBackgroundDimmed: true;
 
-#welcome-section {
+
+##{$welcomeString}-section {
   background: url(../images/rzeszow-welcome.png) rgba(255, 255, 255, 0.3);
   //if-else
   @if ($showBackgroundDimmed == true) {
@@ -18,20 +17,20 @@ $showBackgroundDimmed: true;
 }
 
 //variable expansion in selectors
-.#{$welcomeContainer} h1 {
+.#{$welcomeString}-container h1 {
   font-weight: 4 * 200;
   margin: 0;
   font-size: clamp(15px, 8vw, 120px);
 }
 
-.#{$welcomeContainer} {
+.#{$welcomeString}-container {
   @extend %flex-setup-row;
   height: 100%;
   justify-content: space-between;
   align-items: center;
 }
 
-.welcome-text {
+.#{$welcomeString}-text {
   margin-left: clamp(20px, 11vw, 100px);
   margin-bottom: 50px;
   max-width: 60vw;
@@ -44,13 +43,13 @@ $showBackgroundDimmed: true;
     font-size: 25px;
   }
 
-  .#{$welcomeContainer} {
+  .#{$welcomeString}-container {
     @include flex-setup(row);
     height: 100%;
     justify-content: flex-end;
   }
 
-  .welcome-text {
+  .#{$welcomeString}-text {
     justify-content: flex-end;
     margin-left: clamp(13px, 8vw, 100px);
     margin-bottom: 50px;
