@@ -2,3 +2,9 @@
 @function calc-border-radius($height) {
   @return calc($height / 2);
 }
+
+@function lightened($value) {
+  @return rgb(255, 100 + 155, 255, $value);
+}
+
+

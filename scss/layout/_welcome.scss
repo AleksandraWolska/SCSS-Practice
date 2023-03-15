@@ -1,19 +1,30 @@
+$welcomeContainer: "welcome-container";
+$showBackgroundDimmed: true;
+
 #welcome-section {
   background: url(../images/rzeszow-welcome.png) rgba(255, 255, 255, 0.3);
-  background-blend-mode: lighten;
+  //if-else
+  @if ($showBackgroundDimmed == true) {
+    background-blend-mode: lighten;
+  }
+  @else {
+    background-blend-mode: darken;
+  }
+
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 50+50vh;
   font-size: 25px;
 }
 
-.welcome-container h1 {
-  font-weight: 800;
+//variable expansion in selectors
+.#{$welcomeContainer} h1 {
+  font-weight: 4 * 200;
   margin: 0;
   font-size: clamp(15px, 8vw, 120px);
 }
 
-.welcome-container {
+.#{$welcomeContainer} {
   @extend %flex-setup-row;
   height: 100%;
   justify-content: space-between;
@@ -26,14 +37,14 @@
   max-width: 60vw;
 }
 
-@media only screen and (max-width: 769px) {
+@include only-for-mobile() {
   #welcome-section {
     background-size: cover;
 
     font-size: 25px;
   }
 
-  .welcome-container {
+  .#{$welcomeContainer} {
     @include flex-setup(row);
     height: 100%;
     justify-content: flex-end;

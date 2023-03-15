@@ -3,7 +3,7 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.2);
   justify-content: space-between;
   height: 65px;
   overflow: visible;
@@ -76,7 +76,7 @@ nav {
   overflow: visible;
 }
 
-@media screen and (max-width: 769px) {
+@media (max-width: 768px) {
   body {
     margin: 0;
     display: block;
@@ -123,7 +123,7 @@ nav {
   max-width: 60vw;
 }
 
-@media only screen and (max-width: 769px) {
+@media (max-width: 768px) {
   #welcome-section {
     background-size: cover;
     font-size: 25px;

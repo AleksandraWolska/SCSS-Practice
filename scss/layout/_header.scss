@@ -1,10 +1,11 @@
 header {
     @extend %flex-setup-row;
+
     z-index: 5;
     position: fixed;
     width: 100%;
     top: 0;
-    background: rgba(0, 0, 0, 0.2);
+    background: lightened(.2);
     justify-content: space-between;
     height: 65px;
     overflow: visible;
@@ -88,7 +89,7 @@ header {
 
 
   
-@media screen and (max-width: 769px) {
+@include only-for-mobile() {
     body {
       margin: 0;
       display: block;
